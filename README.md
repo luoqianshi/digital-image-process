@@ -5,7 +5,7 @@
 ## 项目结构
 
 ```
-digital-image-enhance-lkh/
+digital-image-process/
 │
 ├── homework2-t1/     # 实验一：不同滤波方法的图像去噪对比分析
 ├── homework2-t2/     # 实验二：二值图像生成与均值滤波处理
@@ -58,7 +58,7 @@ digital-image-enhance-lkh/
 **关键文件：**
 - `add_noise.py`：添加噪声的实现
 - `enhance.py`：基础图像增强方法
-- `ref_enhance.py`：参考增强与去噪方法
+- `other_enhance.py`：其它增强与去噪方法
 - `/img`：原始图像目录
 - `/denoise_imgs`：去噪结果输出目录
 
