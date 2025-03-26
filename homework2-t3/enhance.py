@@ -158,11 +158,11 @@ def enhance_image(image, edge_weight=0.3):
     
     # 7. 调整亮度和对比度
     # Sobel边缘增强结果的亮度调整
-    enhanced_sobel_bright = adjust_brightness_contrast(enhanced_sobel, alpha=1.1, beta=20)
+    enhanced_sobel_bright = adjust_brightness_contrast(enhanced_sobel, alpha=1.3, beta=20)
     cv2.imwrite('lena_4_sobel.png', enhanced_sobel_bright)
     
     # Laplacian边缘增强结果的亮度调整
-    enhanced_laplacian_bright = adjust_brightness_contrast(enhanced_laplacian, alpha=1.1, beta=20)
+    enhanced_laplacian_bright = adjust_brightness_contrast(enhanced_laplacian, alpha=1.3, beta=20)
     cv2.imwrite('lena_4_laplacian.png', enhanced_laplacian_bright)
     
     return enhanced_sobel  # 默认返回Sobel增强结果
