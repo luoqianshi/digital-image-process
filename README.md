@@ -5,11 +5,12 @@
 ## 项目结构
 
 ```
-digital-image-enhance-lkh/
+digital-image-process/
 │
 ├── homework2-t1/     # 实验一：不同滤波方法的图像去噪对比分析
 ├── homework2-t2/     # 实验二：二值图像生成与均值滤波处理
 ├── homework2-t3/     # 实验三：多种图像增强与去噪方法实现
+├── homework3-t1/     # 实验四：图像灰度转换与阈值分割分析
 └── README.md        # 项目主说明文档
 ```
 
@@ -58,9 +59,29 @@ digital-image-enhance-lkh/
 **关键文件：**
 - `add_noise.py`：添加噪声的实现
 - `enhance.py`：基础图像增强方法
-- `ref_enhance.py`：参考增强与去噪方法
+- `other_enhance.py`：其它增强与去噪方法
 - `/img`：原始图像目录
 - `/denoise_imgs`：去噪结果输出目录
+
+### 实验四：图像灰度转换与阈值分割分析 (homework3-t1)
+
+该实验实现了图像灰度转换、直方图分析和多种阈值分割方法，用于分析不同分割方法的效果。
+
+**主要内容：**
+- 实现彩色图像到灰度图像的转换
+- 生成并分析灰度图像的直方图
+- 实现多种阈值分割方法：
+  - 自适应迭代阈值分割
+  - OTSU方法（大津法）
+  - 简单全局阈值分割
+- 分析不同分割方法的效果和适用场景
+
+**关键文件：**
+- `gray.py`：图像灰度转换脚本
+- `analysis.py`：灰度直方图分析脚本
+- `segment.py`：多种阈值分割方法实现
+- `/imgs`：输入图像目录
+- `/results`：处理结果输出目录
 
 ## 使用说明
 
@@ -90,6 +111,7 @@ pip install numpy opencv-python matplotlib scipy scikit-image pywavelets
 2. 某些实验可能需要先生成中间结果，然后再进行后续处理
 3. 处理大图像时，某些算法可能需要较长时间运行
 4. 所有实验的结果都会保存在各自的输出目录中
+5. 对于阈值分割实验，结果会保存在以图像名命名的子目录中
 
 ## 作者
 
