@@ -11,6 +11,7 @@ digital-image-process/
 ├── homework2-t2/     # 实验二：二值图像生成与均值滤波处理
 ├── homework2-t3/     # 实验三：多种图像增强与去噪方法实现
 ├── homework3-t1/     # 实验四：图像灰度转换与阈值分割分析
+├── homework3-t2/     # 实验五：基于区域和边缘的图像分割方法实现
 └── README.md        # 项目主说明文档
 ```
 
@@ -82,6 +83,43 @@ digital-image-process/
 - `segment.py`：多种阈值分割方法实现
 - `/imgs`：输入图像目录
 - `/results`：处理结果输出目录
+
+### 实验五：基于区域和边缘的图像分割方法实现 (homework3-t2)
+
+该实验实现了基于区域和基于边缘的两类图像分割方法，用于分析不同分割方法的效果和适用场景。
+
+**主要内容：**
+- 基于区域的图像分割方法：
+  - 简单区域生长法
+  - 质心区域生长法
+- 基于边缘的图像分割方法：
+  - Roberts算子
+  - Prewitt算子
+  - Sobel算子
+  - Laplacian算子
+  - LOG算子（Laplacian of Gaussian）
+  - Canny算子
+- 分析不同分割方法的特点和适用场景
+- 比较不同参数设置对分割效果的影响
+
+**关键文件：**
+- `area_based_segment.py`：基于区域的图像分割方法实现
+- `edge_based_segment.py`：基于边缘的图像分割方法实现
+- `analysis.py`：图像分析脚本
+- `/imgs`：输入图像目录
+- `/results`：处理结果输出目录
+  - `/area_based_segment`：区域分割结果
+  - `/edge_based_segment`：边缘分割结果
+
+**参数调优经验：**
+- 区域生长法：
+  - 生长阈值：10-50，根据图像对比度调整
+  - 最大区域大小：图像面积的10%-30%
+  - 种子点选择：3-7个，根据图像复杂度调整
+- 边缘检测：
+  - Roberts/Prewitt/Sobel：适合噪声较小的图像
+  - LOG/Canny：适合噪声较大的图像
+  - Laplacian：适合需要精确定位边缘的场景
 
 ## 使用说明
 
